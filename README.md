@@ -10,15 +10,15 @@ objects.
 **Your task is to handle the checked exceptions that I haven’t handled inside the CSVReader_Writer
 utility class.**
 
-- [ ] At least one method should be handled with a try-catch-finally.
-- [ ] At least one method should be handled with a try with resources with a catch.
-- [ ] One method declare a “throws” that needs to be handled at the method invocation.
-- [ ] You should create one custom exception that will get thrown from the add methods in
+- [x] At least one method should be handled with a try-catch-finally.
+- [x] At least one method should be handled with a try with resources with a catch.
+- [x] One method declare a “throws” that needs to be handled at the method invocation.
+- [x] You should create one custom exception that will get thrown from the add methods in
 NameService class and handled with a friendly error message whenever you try to add a
 name that already exists.
-- [ ] You must successfully be able to create object of type Person using the method
+- [x] You must successfully be able to create object of type Person using the method
 getNewRandomPerson.
-- [ ] If you add new names you must also be able to save the lists to file.
+- [x] If you add new names you must also be able to save the lists to file.
 
 
 

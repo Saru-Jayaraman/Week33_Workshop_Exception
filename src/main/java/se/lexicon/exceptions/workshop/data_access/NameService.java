@@ -5,15 +5,16 @@ import java.util.Random;
 
 import se.lexicon.exceptions.workshop.domain.Gender;
 import se.lexicon.exceptions.workshop.domain.Person;
+import se.lexicon.exceptions.workshop.exception.DuplicateNameException;
 import se.lexicon.exceptions.workshop.fileIO.CSVReader_Writer;
 
 public class NameService {
 	
 
-	    private List<String>maleFirstNames;
-	    private List<String>femaleFirstNames;
-	    private List<String>lastNames;
-	    private static Random random = new Random();
+	    private final List<String> maleFirstNames;
+	    private final List<String> femaleFirstNames;
+	    private final List<String> lastNames;
+	    private final static Random random = new Random();
 
 	    //should be no nulls
 	    public NameService(List<String> maleFirstNames, List<String> femaleFirstNames, List<String> lastNames) {
@@ -61,10 +62,14 @@ public class NameService {
 	     * DuplicateNameException.
 	     * @param name
 	     */
-	    public void addFemaleFirstName(String name){
-	    	femaleFirstNames.add(name);
-	    	CSVReader_Writer.saveFemaleNames(femaleFirstNames);
-	    		
+	    public void addFemaleFirstName(String name) throws DuplicateNameException {
+			if(femaleFirstNames.contains(name))
+				throw new DuplicateNameException("Entered Female First Name already exists in the file... ", name);
+	    	else {
+				femaleFirstNames.add(name);
+				CSVReader_Writer.saveFemaleNames(femaleFirstNames);
+				System.out.println("Female firstname added to the file..." + name);
+			}
 	    }
 
 	    /**
@@ -73,9 +78,14 @@ public class NameService {
 	     * DuplicateNameException.
 	     * @param name
 	     */
-	    public void addMaleFirstName(String name){
-	    	maleFirstNames.add(name);
-	        CSVReader_Writer.saveMaleNames(maleFirstNames);
+	    public void addMaleFirstName(String name) throws DuplicateNameException {
+			if(maleFirstNames.contains(name))
+				throw new DuplicateNameException("Entered Male First Name already exists in the file... ", name);
+			else {
+				maleFirstNames.add(name);
+				CSVReader_Writer.saveMaleNames(maleFirstNames);
+				System.out.println("Male firstname added to the file..." + name);
+			}
 	    }
 
 	    /**
@@ -84,11 +94,13 @@ public class NameService {
 	     * DuplicateNameException.
 	     * @param lastName
 	     */
-	    public void addLastName(String lastName){
-	    	lastNames.add(lastName);
-	        CSVReader_Writer.saveLastNames(lastNames);
+	    public void addLastName(String lastName) throws DuplicateNameException {
+			if(lastNames.contains(lastName))
+				throw new DuplicateNameException("Entered Last Name already exists in the file... ", lastName);
+			else {
+				lastNames.add(lastName);
+				CSVReader_Writer.saveLastNames(lastNames);
+				System.out.println("Lastname added to the file..." + lastName);
+			}
 	    }
-
-
-	
 }
