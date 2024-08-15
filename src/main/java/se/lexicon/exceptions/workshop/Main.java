@@ -11,19 +11,19 @@ import se.lexicon.exceptions.workshop.fileIO.CSVReader_Writer;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		List <String> maleFirstNames = CSVReader_Writer.getMaleFirstNames();
-        System.out.println("Male names: " + maleFirstNames);
-        System.out.println();
-
-        List <String> femaleFirstNames = CSVReader_Writer.getFemaleFirstNames();
-        System.out.println("Female names: " + femaleFirstNames);
-        System.out.println();
-
-        List <String> lastNames;
-        NameService nameService;
-        Person test;
         try {
+            List <String> maleFirstNames = CSVReader_Writer.getMaleFirstNames();
+            System.out.println("Male names: " + maleFirstNames);
+            System.out.println();
+
+            List <String> femaleFirstNames = CSVReader_Writer.getFemaleFirstNames();
+            System.out.println("Female names: " + femaleFirstNames);
+            System.out.println();
+
+            List <String> lastNames;
+            NameService nameService;
+            Person test;
+
             lastNames = CSVReader_Writer.getLastNames();
             System.out.println("Last names: " + lastNames);
             System.out.println();

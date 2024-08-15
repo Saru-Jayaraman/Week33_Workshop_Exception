@@ -61,8 +61,6 @@ public class CSVReader_Writer {
             System.out.println("============================================================");
             MyExceptionHandlerClass.handleExceptionsInCSVReaderWriter(e);
             System.out.println("============================================================");
-        } finally {
-            System.out.println("Finally block executed...");
         }
         return names;
     }
@@ -88,8 +86,6 @@ public class CSVReader_Writer {
             System.out.println("============================================================");
             MyExceptionHandlerClass.handleExceptionsInCSVReaderWriter(e);
             System.out.println("============================================================");
-        } finally {
-            System.out.println("Finally block executed...");
         }
         return names;
     }
@@ -108,8 +104,6 @@ public class CSVReader_Writer {
             System.out.println("============================================================");
             MyExceptionHandlerClass.handleExceptionsInCSVReaderWriter(e);
             System.out.println("============================================================");
-        } finally {
-            System.out.println("Finally block executed...");
         }
     }
 
@@ -127,8 +121,6 @@ public class CSVReader_Writer {
             System.out.println("============================================================");
             MyExceptionHandlerClass.handleExceptionsInCSVReaderWriter(e);
             System.out.println("============================================================");
-        } finally {
-            System.out.println("Finally block executed...");
         }
     }
 
@@ -146,8 +138,6 @@ public class CSVReader_Writer {
             System.out.println("============================================================");
             MyExceptionHandlerClass.handleExceptionsInCSVReaderWriter(e);
             System.out.println("============================================================");
-        } finally {
-            System.out.println("Finally block executed...");
         }
     }
 }
