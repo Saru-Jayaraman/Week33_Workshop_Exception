@@ -7,7 +7,7 @@ The purpose is to build a library of names that you can use to “seed” random
 objects.
 
 
-**Your task is to handle the checked exceptions that I haven’t handled inside the CSVReader_Writer
+**Task is to handle the checked exceptions that I haven’t handled inside the CSVReader_Writer
 utility class.**
 
 - [x] At least one method should be handled with a try-catch-finally.
